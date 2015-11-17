@@ -1,0 +1,24 @@
+{
+  "name": "Okta Verify Auto Send",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "author": "Mike Kenyon",
+  "description": "Automatically send an Okta Verify push notification or SMS.",
+  "homepage_url": "https://github.com/mkenyon/okta-verify-auto-send",
+  "icons": {
+  },
+  "permissions": [
+    "http://*.okta.com/login/second-factor-challenge?*",
+    "https://*.okta.com/login/second-factor-challenge?*"
+  ],
+  "short_name": "Okta Verify Auto Send",
+  "content_scripts": [{
+    "matches": [
+      "http://*.okta.com/login/second-factor-challenge?*",
+      "https://*.okta.com/login/second-factor-challenge?*"
+    ],
+    "js": [
+      "src/inject/okta-verify.js"
+    ]
+  }]
+}
