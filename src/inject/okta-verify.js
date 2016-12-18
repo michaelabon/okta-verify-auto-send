@@ -1,38 +1,21 @@
 (function() {
-  console.log('2');
-  var pushToDeviceSupported = false;
-  var factorSelector = document.getElementById('factor_selector');
-  if (factorSelector) {
-    console.log('factorSelector.options', factorSelector.options);
-    for (var i = 0; i < factorSelector.options.length; i++) {
-      if (factorSelector.options[i].value === 'OKTA_SOFT_TOKEN') {
-        factorSelector.value = 'OKTA_SOFT_TOKEN';
-        factorSelector.dispatchEvent(new Event('change'));
-        pushToDeviceSupported = true;
-      }
-    }
+  function findPushNotifButton() {
+    return document.querySelector('input[value="Send Push"]');
   }
 
-  function getButton(pushToDeviceSupported) {
-    console.log('getButton', pushToDeviceSupported);
+  function findSendSMSButton() {
+    return document.querySelector('[data-se=sms-send-code]');
+  }
 
-    var button;
-
-    if (pushToDeviceSupported) {
-      button = document.getElementById('send-push');
-    } else {
-      button = document.getElementById('send-sms');
-    }
+  function getButton() {
+    var button = findPushNotifButton() || findSendSMSButton();
 
     if (button) {
-      console.log('button', button);
       button.click();
     } else {
-      setTimeout(getButton, 100, pushToDeviceSupported);
+      setTimeout(getButton, 100);
     }
   }
 
-  getButton(pushToDeviceSupported);
+  getButton();
 }());
-
-console.log('1');
