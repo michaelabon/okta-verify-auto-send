@@ -13,6 +13,7 @@
   "short_name": "Okta Verify Auto Send",
   "content_scripts": [{
     "matches": [
+      "https://*.okta.com/",
       "https://*.okta.com/login/login.htm*",
       "https://*.okta.com/signin/verify/okta/push",
       "https://*.okta.com/signin/verify/okta/sms"
