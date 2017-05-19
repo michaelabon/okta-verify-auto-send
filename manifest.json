@@ -1,11 +1,13 @@
 {
   "name": "Okta Verify Auto Send",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "manifest_version": 2,
   "author": "Mike Kenyon",
   "description": "Automatically send an Okta Verify push notification or SMS.",
   "homepage_url": "https://github.com/mkenyon/okta-verify-auto-send",
   "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
   },
   "permissions": [
       "https://*.okta.com/"
