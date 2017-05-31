@@ -9,7 +9,7 @@ phone.
 
 ## Install the extension
 
-The extension is available on the [Chrome Web Store](https://chrome.google.com/webstore/detail/okta-verify-auto-send/emplldgagngbkepbhafkhcnlmjfjjbdp?hl=en-US).
+The extension is available on the [Chrome Web Store](https://chrome.google.com/webstore/detail/okta-verify-auto-send/emplldgagngbkepbhafkhcnlmjfjjbdp?hl=en-US) and as a [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/okta-verify-auto-send/)
 
 ## License
 
