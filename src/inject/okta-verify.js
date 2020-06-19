@@ -13,11 +13,13 @@
 
   function getButton() {
     var button = findPushNotifButton() || findSendSMSButton();
+    var checkbox = findDoNotChallengeMeCheckbox();
+    
+    if (button && checkbox) {
+      checkbox.click();
+    }
 
     if (button) {
-      var checkbox = findDoNotChallengeMeCheckbox();
-
-      checkbox.click();
       button.click();
     } else {
       setTimeout(getButton, 100);
