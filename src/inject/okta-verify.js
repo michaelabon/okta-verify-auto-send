@@ -27,4 +27,20 @@
   }
 
   getButton();
+  
+  function findEnterCodeLink() {
+    return document.querySelector('a[data-se="inline-totp-add"]');
+  }
+
+  function getLink() {
+    var link = findEnterCodeLink();
+
+    if (link) {
+      link.click();
+    } else {
+      setTimeout(getLink, 100);
+    }
+  }
+  
+  getLink();
 }());
